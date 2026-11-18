@@ -8,6 +8,7 @@ import {
   UserRound,
   MessageCircle,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import Container from "../../common/container";
 
 export default function Footer() {
@@ -41,7 +42,7 @@ export default function Footer() {
               </summary>
               <ul className="space-y-3 pt-4 text-sm text-text-footer">
                 <li>
-                  <a href="#">about us</a>
+                <Link to="/about">about us</Link>
                 </li>
                 <li>
                   <a href="#">blog</a>
@@ -162,7 +163,7 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2 text-[16px] text-text-footer">
                 <li>
-                  <a href="#">about us</a>
+                <Link to="/about">about us</Link>
                 </li>
                 <li>
                   <a href="#">blog</a>

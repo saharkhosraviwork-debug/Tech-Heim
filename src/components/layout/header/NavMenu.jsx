@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Overlay from "../../common/Overlay";
 
 import {
@@ -119,14 +120,23 @@ export default function NavMenu() {
       <nav>
         <ul className="flex items-center gap-12">
           {menuItems.map((item) => (
-            <li key={item} className="group"
-            onMouseEnter={() => {
+            <li
+              key={item}
+              className="group"
+              onMouseEnter={() => {
                 if (item === "Products") {
                   setIsProductsOpen(true);
                 }
-              }}>
-              <a
-                href="#"
+              }}
+            >
+              <Link
+                to={
+                  item === "Home"
+                    ? "/"
+                    : item === "Contact Us"
+                    ? "/contact"
+                    : "#"
+                }
                 className="relative block py-2 text-[16px] text-black transition-all duration-300 hover:text-hover"
               >
                 {item}
@@ -138,14 +148,16 @@ export default function NavMenu() {
                       "linear-gradient(to right, #0C68F44D 0%, #0C68F4 30%, #0C68F4 70%, #0C68F44D 100%)",
                   }}
                 />
-              </a>
+              </Link>
 
-              {item === "Products" && isProductsOpen &&(
-                <div className={`absolute left-1/2 top-full z-50 w-full -translate-x-1/2 transition-all duration-300 ease-in-out ${
+              {item === "Products" && isProductsOpen && (
+                <div
+                  className={`absolute left-1/2 top-full z-50 w-full -translate-x-1/2 transition-all duration-300 ease-in-out ${
                     isProductsOpen
                       ? "visible translate-y-0 opacity-100"
                       : "invisible translate-y-2 opacity-0"
-                  }`}>
+                  }`}
+                >
                   <div className="flex min-h-[400px] overflow-hidden rounded-[6px] bg-white shadow-[0_2px_12px_rgba(113,113,113,0.12)]">
                     {/* دسته بندی ها  */}
 
