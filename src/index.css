@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+@theme {
+ 
+    /* text colors */
+    --color-blue:#042352;
+    --color-box:#2D2D2D;
+    --color-text-footer:#CBCBCB;
+
+    /* button colors */
+    --color-button:#F45E0C;
+
+    --color-slider:#063A88;
+
+    --color-box-shop:#063A88;
+
+    --color-diskount:#FDDBC9;
+
+    --color-hover:#0C68F4;
+
+    --color-blog:#717171;
+
+    --color-footer:#021736;
+
+
+}
+
